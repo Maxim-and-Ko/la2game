@@ -1,0 +1,540 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+::-webkit-scrollbar {width: 6px;border-radius:3px; }
+
+
+
+::-webkit-scrollbar-track {-webkit-box-shadow:0 0 6px rgba(0,0,0,0.3);}
+
+
+
+::-webkit-scrollbar-thumb {background-color: #23152c;outline: 1px solid #23152c;}
+/* ========= Шапочка ============ */
+.header {
+  background-color: rgba(19, 16, 20, 0.9);
+  width: 100%;
+  height: 55px;
+}
+.header_content {
+  width: 1200px;
+  margin: 0 auto;
+}
+.header_links {
+  padding-left: 10px;
+  
+  float:left;
+  padding-top: 15px;
+  
+}
+.header_links_elem {
+  margin-right: 40px;
+  text-decoration: none;
+  font-size: 13px;
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+}
+.header_links_elem:hover {
+  color: #e4a101;
+}
+.header_banners {
+  padding-top: 15px;
+  padding-right: 10px;
+  float: right;
+  display: flex;
+}
+.langchooser {
+  border: 2px solid #2c2247;
+  border-radius: 25px;
+  color: #d9c9fa;
+  font-family: 'Oswald', sans-serif;
+  margin-left: 10px;
+  height: 25px;
+  padding: 0 10px;
+  font-size: 15px;
+}
+.langchooser_img {
+  transform: translateY(3px);
+}
+.langchooser_text {
+  line-height: 0;
+}
+
+
+/* ========== Меню =========== */
+.menu {
+  background-color: rgba(51, 41, 87, 0.8);
+  /* opacity: 0.839; */
+  /* background: radial-gradient(circle,rgba(68, 54, 122,0.8), rgba(51, 41, 87,0.8)); */
+  background: url('../images/header.png');
+  width: 1200px;
+  height: 98px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  margin: 0 auto;
+  display: flex;
+}
+.menu_logotype {
+  display: flex;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+.menu_logotype_img {
+  width: 77px;
+  height: 77px;
+}
+.menu_logotype_textfolder {
+  margin-left: 5px;
+}
+.menu_logotype_text {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 34px;
+  color: white;
+  display: inline-block;
+  line-height: 1.4;
+}
+.menu_logotype_text2 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  color: white;
+  
+}
+.menu_navigation {
+  list-style: none;
+  padding-top: 35px;
+  margin-left: 50px;
+}
+.menu_navpoint {
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 10px 15px;
+  transition: 0.4s;
+  clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0% 100%);
+}
+
+.menu_navpoint:hover {
+  color: #000;
+  transition: 0.4s;
+  background: #e4a101;
+  clip-path: polygon(15% 0%, 100% 0, 85% 100%, 0% 100%);
+}
+
+.menu_navpoint_current {
+  text-decoration: none;
+  color: #000;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  background: #e4a101;
+  padding: 10px 15px;
+  clip-path: polygon(15% 0%, 100% 0, 85% 100%, 0% 100%);
+}
+.menu_navigation li {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+/* ====== Баннеры ========= */
+.banners {
+  margin-top: 40px;
+}
+.banner_timer {
+  /* background: url('../images/banners-timer.png') no-repeat; */
+  height: 118px;
+  /* display: flex; */
+  width: 52%;
+  text-align: right;
+  padding: 20px 0 0 0; 
+  
+}
+.banner_timertext_left {
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+  /* margin: auto 20px; */
+  display: inline-block;
+  margin-right: 10px;
+}
+.banner_timertext_right {
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+  /* margin: auto 20px; */
+  display: inline-block;
+  margin-right: 60px;
+  margin-left: 10px;
+}
+.banner_timertext1 {
+  font-size: 21px;
+  font-weight: 500;
+}
+.banner_timertext2 {
+  font-size: 25px;
+  font-weight: 700;
+  
+}
+.banner_ciferblat_num {
+  font-size: 50px;
+  line-height: 0.9;
+  color: #e4a101;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+}
+.banner_ciferblat_desc {
+  font-size: 12px;
+  line-height: 0;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  color: #fff;
+  
+
+}
+
+.banner_ciferblat {
+  /* margin: auto 0; */
+  display: inline-block;
+  text-align: left;
+  
+}
+.banner_ciferblat_ris {
+  font-size: 50px;
+  line-height: 0.9;
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+}
+
+
+.banner_title {
+  margin-top: 10px;
+  /* background: url('../images/banners-title.png') no-repeat; */
+  height: 255px;
+  text-align: right;
+  width: 54%;
+}
+.banner_titlecontent {
+  text-align: center;
+  width: 600px;
+  float:right;
+  margin-right: 65px;
+}
+.banner_title_head {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 91px;
+  color: #fff;
+  display: inline-block;
+  line-height: 1.1;
+  
+}
+.banner_title_text {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  font-size: 17px;
+  color: #fff;
+  /* max-width: 600px; */
+  /* margin: 10px auto; */
+}
+
+.banner_buttons {
+  width: 50%;
+  text-align: right;
+  margin-top: 25px;
+  margin-bottom: 60px;
+}
+.banner_buttons a {
+  text-decoration: none;
+}
+.megabutton_newgame {
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  font-weight: 700;
+  font-size: 23px;
+  color: #000;
+  display: inline-block;
+  width: 275px;
+  height: 73px;
+  padding: 20px 0;
+  background: url('../images/button_newgame.png') no-repeat;
+}
+.megabutton_newgame:hover {
+
+}
+.megabutton_wiki {
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  font-weight: 700;
+  font-size: 23px;
+  color: #fff;
+  display: inline-block;
+  width: 275px;
+  height: 73px;
+  padding: 20px 0;
+  background: url('../images/button_wiki.png') no-repeat;
+}
+.megabutton_wiki:hover {
+  
+}
+.megabutton_wiki p {
+  font-weight: 300;
+  font-size: 14px;
+  
+}
+
+
+
+.servers {
+  /* margin-top: 100px; */
+  background: url('../images/servers.png') no-repeat;
+  height: 98px;
+  margin: 0 auto;
+  width: 1200px;
+}
+
+.servers_folder {
+  display: inline-block;
+  text-align: center;
+  margin-top: 25px;
+  margin-left: 48px;
+}
+.servers_folder1 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  color: #e4a101; 
+  font-size: 16px;
+}
+.servers_folder2 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  color: #fff; 
+  font-size: 20px;
+}
+
+
+.page {
+  margin: 0 auto;
+  width: 1200px;
+  margin-top: 35px;
+  display: flex;
+}
+
+.content {
+  position: relative;
+  width: 746px;
+  padding: 23px 23px 70px 23px;
+  background: rgba(25, 10, 34,0.93);
+  z-index: -3;
+  border-radius: 15px;
+}
+.content-background {
+  
+  background: url('../images/content.png');
+  position: absolute;
+  width: 792px;
+  height: 580px;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.news_card {
+  background: #170f20;
+  border: 2px solid #231731;
+  width: auto;
+  height: 238px;
+  margin-bottom: 30px;
+  z-index: 10;
+  /* padding: 14px; */
+
+}
+.news_card-poster {
+  margin-top: 14px;
+  margin-left: 14px;
+  width: 326px;
+  height: 209px;
+  background: url('../images/1.png');
+  position: relative;
+  border: 1px solid #231731;
+  display: inline-block;
+}
+.news_card-poster_u {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.news_card-poster_b {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.news_card-posterinfo {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  color: #e4a101; 
+  font-size: 12px;
+  margin: 10px 0 0 20px;
+}
+.news_card-content {
+  display: inline-block;
+  width: 380px;
+  padding-left: 8px;
+  padding-top: 10px;
+  vertical-align: top;
+  position: relative;
+}
+.news_card_title {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  color: #e4a101; 
+  font-size: 20px;
+
+}
+.news_card_text {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  color: #fff; 
+  font-size: 17px;
+  max-height: 150px;
+}
+.news_card_next {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  color: #e4a101; 
+  font-size: 15px;
+  
+  float: right;
+}
+
+.sidebar {
+  margin-left: 20px;
+  width: 389px;
+  position: relative;
+
+  /* background: rgba(25, 10, 34,0.93); */
+  z-index: -3;
+  border-radius: 15px;
+  text-align: center;
+  padding-top: 40px;
+}
+.sidebar-background {
+  
+  background: url('../images/sidebar.png');
+  position: absolute;
+  width: 389px;
+  height: 1239px;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.sidebar_title {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  color: #e4a101; 
+  font-size: 20px;
+}
+.sidebar_buttonlink {
+  margin-top: 18px;
+  cursor: pointer;
+}
+.sidebar_forum {
+  background: #100a17;
+  /* border: 1px solid #1d1328; */
+  /* box-shadow: 0px 0px 0px 5px transparent inset; */
+  border-radius: 10px;
+  margin: 25px 45px 0 45px;
+  position: relative;
+}
+.sidebar_forum:after {
+  content: '';
+  position: absolute;
+  width: 110%;
+  height: 110%;
+  border: 2px solid #5c2c97;
+  border-radius: 10px;
+  top: -5%;
+  left: -5%;
+}
+.forum-preview {
+    text-align: left;
+    
+}
+.forum-preview_poster {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  margin-left: 20px;
+}
+.forum-preview_content {
+  width: 200px;
+  display: inline-block;
+  text-align: left;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  color: #fff; 
+  font-size: 15px;
+  margin-left: 5px;
+  padding: 10px 0;
+  border-bottom: 1px solid #211b27;
+}
+
+.footer {
+  margin-top: 100px;
+}
+.footer_head {
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.80);
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    color: #fff; 
+    font-size: 13px;
+    /* height: 55px; */
+    padding-top: 27px;
+    padding-bottom: 25px;
+      
+}
+.footer_bottom {
+  /* background: url('../images/footer.png'); */
+  width: 1200px;
+  height: 97px;
+  /* background-size: cover; */
+  margin: 0 auto;
+  display: flex;
+  /* padding-top: 10px; */
+}
+.sticker {
+  margin-top: 30px;
+}
+.sticker2 {
+  margin-top: 38px;
+}
+
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+}
+.back1 {
+  height: 882px;
+  background: url(../images/body_banners.png) no-repeat top center;
+}
+.back2 {
+  height: 798px;
+  background: url(../images/body2.png) no-repeat top center;
+}
+.back3 {
+  height: 716px;
+  
+  background: url(../images/body3.png) no-repeat top center;
+}
+body {
+  background: #17061d;
+}
