@@ -75,6 +75,8 @@
   border-bottom-right-radius: 25px;
   margin: 0 auto;
   display: flex;
+  z-index: 10;
+  position: relative;
 }
 .menu_logotype {
   display: flex;
@@ -148,7 +150,7 @@
   /* background: url('../images/banners-timer.png') no-repeat; */
   height: 118px;
   /* display: flex; */
-  width: 52%;
+  width: 51%;
   text-align: right;
   padding: 20px 0 0 0; 
   
@@ -214,7 +216,7 @@
   /* background: url('../images/banners-title.png') no-repeat; */
   height: 255px;
   text-align: right;
-  width: 54%;
+  width: 53%;
 }
 .banner_titlecontent {
   text-align: center;
@@ -260,9 +262,18 @@
   height: 73px;
   padding: 20px 0;
   background: url('../images/button_newgame.png') no-repeat;
+  transition: 0.3s;
 }
 .megabutton_newgame:hover {
-
+  font-weight: 300;
+  -webkit-filter: brightness(135%);
+  border-radius:50px 0px 0px 0px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
 }
 .megabutton_wiki {
   font-family: 'Oswald', sans-serif;
@@ -275,10 +286,32 @@
   height: 73px;
   padding: 20px 0;
   background: url('../images/button_wiki.png') no-repeat;
+  transition: all 0.5s ease;
+  position: relative;
 }
 .megabutton_wiki:hover {
-  
+  font-weight: 300;
+  -webkit-filter: brightness(250%);
+  border-radius:0px 50px 0px 0px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
 }
+.megabutton_wiki:hover:after {
+  position: absolute;
+  bottom: 40%;
+  left: 18%;
+  content: 'ВСЯ ИНФОРМАЦИЯ В ОДНОМ МЕСТЕ';
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  font-weight: 300;
+  font-size: 13px;
+  transition: 0.5s;
+}
+
 .megabutton_wiki p {
   font-weight: 300;
   font-size: 14px;
@@ -293,6 +326,7 @@
   height: 98px;
   margin: 0 auto;
   width: 1200px;
+  z-index: -20;
 }
 
 .servers_folder {
@@ -313,6 +347,36 @@
   color: #fff; 
   font-size: 20px;
 }
+/*  АНИМАЦИЯЯ */
+
+
+ 
+.parallax-cloud
+{
+   background: url(../images/cloud.png);
+   background-size: 105% 105%;
+   z-index: -1;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+}
+.parallax-girl
+{
+  position: absolute;
+   top: 0;
+   right: 0;
+   background: url(../images/girl.png);
+   width: 931px;
+   height: 944px;
+   /* background-size: 105% 105%; */
+   z-index: -1;
+   transform: translateX(180px) translateY(50px);
+}
+/* КОНЕЦ АНИМАЦИИИИ */
+
+
 
 
 .page {
@@ -327,7 +391,7 @@
   width: 746px;
   padding: 23px 23px 70px 23px;
   background: rgba(25, 10, 34,0.93);
-  z-index: -3;
+  /* z-index: -3; */
   border-radius: 15px;
 }
 .content-background {
@@ -338,10 +402,11 @@
   height: 580px;
   top: 0;
   left: 0;
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 .news_card {
+  position: relative;
   background: #170f20;
   border: 2px solid #231731;
   width: auto;
@@ -349,7 +414,20 @@
   margin-bottom: 30px;
   z-index: 10;
   /* padding: 14px; */
+  transition: 0.5s;
 
+}
+.news_card:hover {
+  box-shadow:
+    1px 1px #231731,
+    2px 2px #231731,
+    3px 3px #231731,
+    4px 4px #231731,
+    5px 5px #231731,
+    6px 6px #231731,
+    7px 7px #231731;
+  -webkit-transform: translateX(-7px);
+  transform: translateX(-7px);
 }
 .news_card-poster {
   margin-top: 14px;
@@ -413,22 +491,36 @@
   margin-left: 20px;
   width: 389px;
   position: relative;
-
-  /* background: rgba(25, 10, 34,0.93); */
-  z-index: -3;
+  z-index: 1;
   border-radius: 15px;
   text-align: center;
   padding-top: 40px;
+  /* background: rgba(25, 10, 34, 0.92); */
 }
 .sidebar-background {
   
-  background: url('../images/sidebar.png');
+  background: url('../images/sidebar.png') no-repeat;
   position: absolute;
   width: 389px;
   height: 1239px;
   top: 0;
   left: 0;
   z-index: -1;
+
+}
+.sidebar-background2 {
+  
+  background: rgba(25, 10, 34, 0.92);
+  position: absolute;
+  width: 389px;
+  height: 70%;
+  margin-top: 389px;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+
 }
 .sidebar_title {
   font-family: 'Oswald', sans-serif;
@@ -439,16 +531,34 @@
 .sidebar_buttonlink {
   margin-top: 18px;
   cursor: pointer;
+  transition: 0.5s;
+  border-radius: 15px;
+}
+
+.sidebar_buttonlink:hover {
+  opacity: 1;
+
+  /*Свечение*/
+
+-webkit-box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
+
+-moz-box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
+
+box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
+-webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
 }
 .sidebar_forum {
   background: #100a17;
   /* border: 1px solid #1d1328; */
   /* box-shadow: 0px 0px 0px 5px transparent inset; */
   border-radius: 10px;
-  margin: 25px 45px 0 45px;
+  margin: 25px 45px 30px 45px;
   position: relative;
+  
 }
-.sidebar_forum:after {
+.sidebar_forum:before {
   content: '';
   position: absolute;
   width: 110%;
@@ -457,16 +567,27 @@
   border-radius: 10px;
   top: -5%;
   left: -5%;
+  z-index: -1;
+  transition: 0.7s;
+}
+.sidebar_forum:hover:before {
+  width: 101%;
+  height: 101%;
+  top: -2px;
+  left: -2px;
 }
 .forum-preview {
     text-align: left;
-    
+    z-index: 10;
+    transition: 0.7s;
 }
 .forum-preview_poster {
   width: 30px;
   height: 30px;
   display: inline-block;
   margin-left: 20px;
+  transition: all 0.3s ease;
+  
 }
 .forum-preview_content {
   width: 200px;
@@ -480,7 +601,11 @@
   padding: 10px 0;
   border-bottom: 1px solid #211b27;
 }
-
+.forum-preview:hover {
+  box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
+  background: transparent !important;
+  border-radius: 15px;
+}
 .footer {
   margin-top: 100px;
 }
@@ -521,6 +646,7 @@
   width: 100%;
   height: 100%;
   z-index: -10;
+
 }
 .back1 {
   height: 882px;
@@ -532,9 +658,19 @@
 }
 .back3 {
   height: 716px;
-  
-  background: url(../images/body3.png) no-repeat top center;
+  background: url(../images/body3.png) no-repeat bottom;
+  /* background: url(../images/bg/bg__header_full.jpg) no-repeat top,url(../images/bg/bg__footer.jpg) no-repeat bottom,#f5fafd url(../images/bg/bg-repeat.jpg) repeat top; */
+}
+.background-end {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: -10;
+  height: 716px;
+  background: url(../images/body3.png) no-repeat;
 }
 body {
-  background: #17061d;
+   overflow-x: hidden;
+  background:#17061d url(../images/body3.png) no-repeat bottom;
 }
