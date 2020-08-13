@@ -328,7 +328,8 @@
   height: 98px;
   margin: 0 auto;
   width: 1200px;
-  z-index: -20;
+  z-index: -2;
+  position: relative;
 }
 
 .servers_folder {
@@ -612,6 +613,21 @@ box-shadow: 0px 0px 10px rgba(255,255,255,0.8);
   box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
   background: transparent !important;
   border-radius: 15px;
+}
+.forum-preview:hover .forum-preview_poster {
+    animation-name: rotation;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+}
+@keyframes rotation {
+  0% {
+      transform:rotate(0deg);
+  }
+  100% {
+      transform:rotate(360deg);
+  }
 }
 .footer {
   margin-top: 100px;
