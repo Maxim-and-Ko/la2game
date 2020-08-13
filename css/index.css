@@ -266,14 +266,16 @@
 }
 .megabutton_newgame:hover {
 
-  -webkit-filter: brightness(135%);
+  /* -webkit-filter: brightness(120%); */
   border-radius:50px 0px 0px 0px;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  -webkit-transform: scale(0.9);
-  -ms-transform: scale(0.9);
-  transform: scale(0.9);
+  -webkit-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
+  letter-spacing: 2px;
+  
 }
 .megabutton_wiki {
   font-family: 'Oswald', sans-serif;
@@ -286,37 +288,37 @@
   height: 73px;
   padding: 20px 0;
   background: url('../images/button_wiki.png') no-repeat;
-  transition: all 0.5s ease;
+  transition: 0.4s ease;
   position: relative;
 }
 .megabutton_wiki:hover {
 
-  -webkit-filter: brightness(250%);
+  /* -webkit-filter: brightness(250%); */
   border-radius:0px 50px 0px 0px;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-  -webkit-transform: scale(0.9);
-  -ms-transform: scale(0.9);
-  transform: scale(0.9);
+
+
+  -webkit-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
+  letter-spacing: 2px;
+  
 }
-.megabutton_wiki:hover:after {
+/* .megabutton_wiki:hover:after {
   position: absolute;
   bottom: 40%;
-  left: 18%;
+  left: 13%;
   content: 'ВСЯ ИНФОРМАЦИЯ В ОДНОМ МЕСТЕ';
   font-family: 'Oswald', sans-serif;
   text-align: center;
   font-weight: 300;
   font-size: 14px;
   transition: 0.5s;
-}
-
-.megabutton_wiki p {
-  font-weight: 300;
-  font-size: 14px;
+  letter-spacing: 1px;
   
-}
+} */
+
 
 
 
@@ -350,6 +352,8 @@
 /*  АНИМАЦИЯЯ */
 .scene {
   z-index: -1;
+  width: 1200px;
+  margin: 0 auto;
 }
 
  
@@ -367,9 +371,7 @@
    height: 944px;
    float: right;
    /* background-size: 105% 105%; */
-   right: 0;
-   top: 0;
-   position: absolute;
+
    /* transform: translateX(180px) translateY(50px); */
 }
 .parallax-focus
@@ -377,11 +379,6 @@
    background: url(../images/focus.png);
    width: 300px;
    height: 300px;
-   /* background-size: 105% 105%; */
-   right: 0;
-   top: 0;
-   position: absolute;
-   /* transform: translateX(180px) translateY(50px); */
 }
 /* КОНЕЦ АНИМАЦИИИИ */
 
